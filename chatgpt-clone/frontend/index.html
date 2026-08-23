@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Assistant</title>
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Markdown rendering -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js" defer></script>
+  <!-- Syntax highlighting -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+</head>
+<body>
+  <div class="app" id="app">
+
+    <!-- ===== Mobile overlay (click to close sidebar) ===== -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- ===== Sidebar ===== -->
+    <aside class="sidebar" id="sidebar" aria-label="Conversation history">
+      <div class="sidebar-header">
+        <button class="btn-new-chat" id="newChatBtn" aria-label="Start a new chat">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          <span>New Chat</span>
+        </button>
+        <button class="btn-icon btn-collapse" id="collapseBtn" aria-label="Collapse sidebar" title="Collapse sidebar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3v18M15 9l-3 3 3 3"/></svg>
+        </button>
+      </div>
+
+      <div class="sidebar-search">
+        <input type="text" id="searchConversations" placeholder="Search conversations..." aria-label="Search conversations" />
+      </div>
+
+      <nav class="conversation-list" id="conversationList" aria-label="Conversations">
+        <!-- Conversation items injected by sidebar.js -->
+      </nav>
+
+      <div class="sidebar-footer">
+        <button class="btn-icon-text" id="darkModeToggle" aria-label="Toggle dark mode">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          <span>Toggle theme</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- ===== Main chat area ===== -->
+    <main class="main">
+      <header class="topbar">
+        <button class="btn-icon hamburger" id="hamburgerBtn" aria-label="Open sidebar">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+        <h1 class="conversation-title" id="conversationTitle">AI Assistant</h1>
+        <div class="agent-tools" aria-label="Available tools">
+          <span class="agent-tools-label">Tools</span>
+          <span class="tool-badge"><span class="tool-dot search-dot"></span>Google Search</span>
+          <span class="tool-badge"><span class="tool-dot reader-dot"></span>Webpage Reader</span>
+        </div>
+        <div class="topbar-actions">
+          <button class="btn-icon" id="renameBtn" title="Rename conversation" aria-label="Rename conversation">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </button>
+          <button class="btn-icon" id="deleteBtn" title="Delete conversation" aria-label="Delete conversation">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2m3 0-1 14a2 2 0 01-2 2H7a2 2 0 01-2-2L4 6h16z"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <!-- ===== Welcome screen ===== -->
+      <section class="welcome-screen" id="welcomeScreen">
+        <div class="welcome-content">
+          <div class="robot-avatar-large" aria-hidden="true">🤖</div>
+          <h2>Hello! I'm your AI Assistant.</h2>
+          <p>How can I help you today?</p>
+
+          <div class="prompt-cards" id="promptCards">
+            <button class="prompt-card" data-prompt="Explain JavaScript closures with a simple example.">
+              <span class="prompt-card-icon">💡</span>
+              <span>Explain JavaScript Closures</span>
+            </button>
+            <button class="prompt-card" data-prompt="Write a professional email requesting a project deadline extension.">
+              <span class="prompt-card-icon">✉️</span>
+              <span>Write an Email</span>
+            </button>
+            <button class="prompt-card" data-prompt="Summarize the key points of a document I will describe.">
+              <span class="prompt-card-icon">📄</span>
+              <span>Summarize a Document</span>
+            </button>
+            <button class="prompt-card" data-prompt="Generate a SQL query to find the top 5 customers by total order value.">
+              <span class="prompt-card-icon">🗃️</span>
+              <span>Generate SQL Query</span>
+            </button>
+            <button class="prompt-card" data-prompt="Help me create a resume for a software engineering role.">
+              <span class="prompt-card-icon">📝</span>
+              <span>Create Resume</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Chat messages ===== -->
+      <section class="chat-area" id="chatArea" aria-live="polite">
+        <div class="messages" id="messages"></div>
+      </section>
+
+      <!-- ===== Input bar ===== -->
+      <footer class="input-bar">
+        <form class="input-form" id="inputForm">
+          <textarea
+            id="messageInput"
+            class="message-input"
+            placeholder="Message AI..."
+            rows="1"
+            aria-label="Type your message"
+          ></textarea>
+          <button type="submit" class="btn-send" id="sendBtn" aria-label="Send message">
+            <svg class="send-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+        <p class="input-hint">Enter to send · Shift+Enter for a new line</p>
+      </footer>
+    </main>
+  </div>
+
+  <!-- ===== Toast container ===== -->
+  <div class="toast-container" id="toastContainer" aria-live="assertive"></div>
+
+  <!-- App scripts (order matters: dependencies first) -->
+  <script src="js/toast.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/markdown.js"></script>
+  <script src="js/sidebar.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

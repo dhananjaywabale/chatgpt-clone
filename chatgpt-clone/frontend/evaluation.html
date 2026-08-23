@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Evaluation Dashboard</title>
+  <style>
+    :root { color-scheme: light; --ink:#17201d; --muted:#65736c; --paper:#f4f1e8; --panel:#fffdf7; --accent:#d65b3f; --line:#ded9ca; }
+    * { box-sizing:border-box; } body { margin:0; color:var(--ink); background:radial-gradient(circle at 10% 0%,#fff8da 0,transparent 35%),var(--paper); font:16px Georgia,serif; }
+    main { width:min(1100px,calc(100% - 32px)); margin:48px auto; } h1 { font-size:clamp(2rem,5vw,4rem); line-height:1; margin:0 0 10px; } p { color:var(--muted); }
+    button { border:0; border-radius:6px; padding:11px 16px; color:#fff; background:var(--accent); cursor:pointer; font:inherit; } .actions { display:flex; gap:10px; margin:24px 0; flex-wrap:wrap; }
+    section { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:18px; margin-top:18px; overflow:auto; } table { width:100%; border-collapse:collapse; min-width:680px; } th,td { text-align:left; padding:12px 10px; border-bottom:1px solid var(--line); } th { color:var(--muted); font-size:.82rem; text-transform:uppercase; letter-spacing:.04em; } .empty { color:var(--muted); }
+  </style>
+</head>
+<body><main><h1>Evaluation dashboard</h1><p>Execution quality, recovery behavior, and reviewer history from this workspace.</p><div class="actions"><button id="refresh">Refresh results</button><button id="demo">Run failure demo</button></div><section><table><thead><tr><th>Execution</th><th>Completion</th><th>Grounded</th><th>Recovery</th><th>Latency</th><th>Critic</th></tr></thead><tbody id="records"><tr><td colspan="6" class="empty">Loading...</td></tr></tbody></table></section><section><pre id="demoResult" class="empty">The adversarial demo result will appear here.</pre></section></main>
+<script>
+const records = document.getElementById('records'); const demoResult = document.getElementById('demoResult');
+async function load() { const data = await fetch('/api/evaluation').then((r) => r.json()); records.innerHTML = data.records.length ? data.records.map((item) => { const e = item.evaluation; return `<tr><td>${item.executionId || '-'}</td><td>${e.taskCompletion ? 'yes' : 'no'}</td><td>${Math.round(e.groundedness * 100)}%</td><td>${e.recoverySuccess ? 'yes' : 'no'}</td><td>${e.latencyMs} ms</td><td>${Math.round(e.criticScore * 100)}%</td></tr>`; }).join('') : '<tr><td colspan="6" class="empty">No evaluated runs yet.</td></tr>'; }
+document.getElementById('refresh').onclick = load; document.getElementById('demo').onclick = async () => { demoResult.textContent = JSON.stringify(await fetch('/api/evaluation/demo').then((r) => r.json()), null, 2); }; load();
+</script></body></html>

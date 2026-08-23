@@ -1,0 +1,482 @@
+{
+  "f7ccd82f-281c-467e-8211-93f6e4086568": {
+    "planning": {
+      "executionId": "f7ccd82f-281c-467e-8211-93f6e4086568",
+      "request": "Explain JavaScript closures with a simple example.",
+      "context": [],
+      "memory": [],
+      "taskContext": {
+        "currentGoal": "",
+        "completedSteps": [],
+        "pendingSteps": [],
+        "currentPlan": [],
+        "currentFiles": [],
+        "currentDecisions": []
+      },
+      "plan": {
+        "goal": "Explain JavaScript closures with a simple example.",
+        "intent": "Explain JavaScript closures with a simple example.",
+        "complexity": "low",
+        "requiredAgents": [
+          "coordinator",
+          "verifier",
+          "critic"
+        ],
+        "requiredTools": [],
+        "parallelOpportunities": [],
+        "steps": [
+          "Synthesize an answer grounded in available evidence",
+          "Verify major claims and evaluate answer quality"
+        ],
+        "expectedOutput": "A direct response with uncertainty and sources disclosed where relevant.",
+        "confidence": 0.6,
+        "fallbackStrategy": [
+          "retry",
+          "alternative tool",
+          "cached result",
+          "relevant memory",
+          "state uncertainty"
+        ],
+        "estimatedCost": {
+          "toolCalls": 0,
+          "maxSteps": 2,
+          "latencyClass": "low"
+        }
+      },
+      "completedSteps": [],
+      "pendingSteps": [
+        "Synthesize an answer grounded in available evidence",
+        "Verify major claims and evaluate answer quality"
+      ],
+      "toolResults": [],
+      "failures": [],
+      "confidence": 0.6,
+      "metadata": {
+        "startedAt": "2026-08-23T04:27:20.143Z",
+        "retries": 0
+      },
+      "trace": [],
+      "checkpointedAt": "2026-08-23T04:27:20.144Z"
+    },
+    "toolExecution": {
+      "executionId": "f7ccd82f-281c-467e-8211-93f6e4086568",
+      "request": "Explain JavaScript closures with a simple example.",
+      "context": [],
+      "memory": [],
+      "taskContext": {
+        "currentGoal": "",
+        "completedSteps": [],
+        "pendingSteps": [],
+        "currentPlan": [],
+        "currentFiles": [],
+        "currentDecisions": []
+      },
+      "plan": {
+        "goal": "Explain JavaScript closures with a simple example.",
+        "intent": "Explain JavaScript closures with a simple example.",
+        "complexity": "low",
+        "requiredAgents": [
+          "coordinator",
+          "verifier",
+          "critic"
+        ],
+        "requiredTools": [],
+        "parallelOpportunities": [],
+        "steps": [
+          "Synthesize an answer grounded in available evidence",
+          "Verify major claims and evaluate answer quality"
+        ],
+        "expectedOutput": "A direct response with uncertainty and sources disclosed where relevant.",
+        "confidence": 0.6,
+        "fallbackStrategy": [
+          "retry",
+          "alternative tool",
+          "cached result",
+          "relevant memory",
+          "state uncertainty"
+        ],
+        "estimatedCost": {
+          "toolCalls": 0,
+          "maxSteps": 2,
+          "latencyClass": "low"
+        }
+      },
+      "completedSteps": [
+        "Specialist execution"
+      ],
+      "pendingSteps": [
+        "Synthesize an answer grounded in available evidence",
+        "Verify major claims and evaluate answer quality"
+      ],
+      "toolResults": [],
+      "failures": [],
+      "confidence": 0.6,
+      "metadata": {
+        "startedAt": "2026-08-23T04:27:20.143Z",
+        "retries": 0
+      },
+      "trace": [],
+      "checkpointedAt": "2026-08-23T04:27:29.577Z"
+    },
+    "coordinator": {
+      "executionId": "f7ccd82f-281c-467e-8211-93f6e4086568",
+      "request": "Explain JavaScript closures with a simple example.",
+      "context": [],
+      "memory": [],
+      "taskContext": {
+        "currentGoal": "",
+        "completedSteps": [],
+        "pendingSteps": [],
+        "currentPlan": [],
+        "currentFiles": [],
+        "currentDecisions": []
+      },
+      "plan": {
+        "goal": "Explain JavaScript closures with a simple example.",
+        "intent": "Explain JavaScript closures with a simple example.",
+        "complexity": "low",
+        "requiredAgents": [
+          "coordinator",
+          "verifier",
+          "critic"
+        ],
+        "requiredTools": [],
+        "parallelOpportunities": [],
+        "steps": [
+          "Synthesize an answer grounded in available evidence",
+          "Verify major claims and evaluate answer quality"
+        ],
+        "expectedOutput": "A direct response with uncertainty and sources disclosed where relevant.",
+        "confidence": 0.6,
+        "fallbackStrategy": [
+          "retry",
+          "alternative tool",
+          "cached result",
+          "relevant memory",
+          "state uncertainty"
+        ],
+        "estimatedCost": {
+          "toolCalls": 0,
+          "maxSteps": 2,
+          "latencyClass": "low"
+        }
+      },
+      "completedSteps": [
+        "Specialist execution"
+      ],
+      "pendingSteps": [
+        "Synthesize an answer grounded in available evidence",
+        "Verify major claims and evaluate answer quality"
+      ],
+      "toolResults": [],
+      "failures": [],
+      "confidence": 0.6,
+      "metadata": {
+        "startedAt": "2026-08-23T04:27:20.143Z",
+        "retries": 0
+      },
+      "trace": [],
+      "checkpointedAt": "2026-08-23T04:27:29.596Z"
+    },
+    "verification": {
+      "executionId": "f7ccd82f-281c-467e-8211-93f6e4086568",
+      "request": "Explain JavaScript closures with a simple example.",
+      "context": [],
+      "memory": [],
+      "taskContext": {
+        "currentGoal": "",
+        "completedSteps": [],
+        "pendingSteps": [],
+        "currentPlan": [],
+        "currentFiles": [],
+        "currentDecisions": []
+      },
+      "plan": {
+        "goal": "Explain JavaScript closures with a simple example.",
+        "intent": "Explain JavaScript closures with a simple example.",
+        "complexity": "low",
+        "requiredAgents": [
+          "coordinator",
+          "verifier",
+          "critic"
+        ],
+        "requiredTools": [],
+        "parallelOpportunities": [],
+        "steps": [
+          "Synthesize an answer grounded in available evidence",
+          "Verify major claims and evaluate answer quality"
+        ],
+        "expectedOutput": "A direct response with uncertainty and sources disclosed where relevant.",
+        "confidence": 0.6,
+        "fallbackStrategy": [
+          "retry",
+          "alternative tool",
+          "cached result",
+          "relevant memory",
+          "state uncertainty"
+        ],
+        "estimatedCost": {
+          "toolCalls": 0,
+          "maxSteps": 2,
+          "latencyClass": "low"
+        }
+      },
+      "completedSteps": [
+        "Specialist execution"
+      ],
+      "pendingSteps": [
+        "Synthesize an answer grounded in available evidence",
+        "Verify major claims and evaluate answer quality"
+      ],
+      "toolResults": [],
+      "failures": [],
+      "confidence": 0.67,
+      "metadata": {
+        "startedAt": "2026-08-23T04:27:20.143Z",
+        "retries": 0
+      },
+      "trace": [],
+      "checkpointedAt": "2026-08-23T04:27:29.628Z"
+    }
+  },
+  "11c06512-ea5c-4a5b-941f-c9b56a6a3f8c": {
+    "planning": {
+      "executionId": "11c06512-ea5c-4a5b-941f-c9b56a6a3f8c",
+      "request": "Explain JavaScript closures with a simple example.",
+      "context": [],
+      "memory": [],
+      "taskContext": {
+        "currentGoal": "",
+        "completedSteps": [],
+        "pendingSteps": [],
+        "currentPlan": [],
+        "currentFiles": [],
+        "currentDecisions": []
+      },
+      "plan": {
+        "goal": "Explain JavaScript closures with a simple example.",
+        "intent": "Explain JavaScript closures with a simple example.",
+        "complexity": "low",
+        "requiredAgents": [
+          "coordinator",
+          "verifier",
+          "critic"
+        ],
+        "requiredTools": [],
+        "parallelOpportunities": [],
+        "steps": [
+          "Synthesize an answer grounded in available evidence",
+          "Verify major claims and evaluate answer quality"
+        ],
+        "expectedOutput": "A direct response with uncertainty and sources disclosed where relevant.",
+        "confidence": 0.6,
+        "fallbackStrategy": [
+          "retry",
+          "alternative tool",
+          "cached result",
+          "relevant memory",
+          "state uncertainty"
+        ],
+        "estimatedCost": {
+          "toolCalls": 0,
+          "maxSteps": 2,
+          "latencyClass": "low"
+        }
+      },
+      "completedSteps": [],
+      "pendingSteps": [
+        "Synthesize an answer grounded in available evidence",
+        "Verify major claims and evaluate answer quality"
+      ],
+      "toolResults": [],
+      "failures": [],
+      "confidence": 0.6,
+      "metadata": {
+        "startedAt": "2026-08-23T04:48:51.287Z",
+        "retries": 0
+      },
+      "trace": [],
+      "checkpointedAt": "2026-08-23T04:48:51.290Z"
+    },
+    "toolExecution": {
+      "executionId": "11c06512-ea5c-4a5b-941f-c9b56a6a3f8c",
+      "request": "Explain JavaScript closures with a simple example.",
+      "context": [],
+      "memory": [],
+      "taskContext": {
+        "currentGoal": "",
+        "completedSteps": [],
+        "pendingSteps": [],
+        "currentPlan": [],
+        "currentFiles": [],
+        "currentDecisions": []
+      },
+      "plan": {
+        "goal": "Explain JavaScript closures with a simple example.",
+        "intent": "Explain JavaScript closures with a simple example.",
+        "complexity": "low",
+        "requiredAgents": [
+          "coordinator",
+          "verifier",
+          "critic"
+        ],
+        "requiredTools": [],
+        "parallelOpportunities": [],
+        "steps": [
+          "Synthesize an answer grounded in available evidence",
+          "Verify major claims and evaluate answer quality"
+        ],
+        "expectedOutput": "A direct response with uncertainty and sources disclosed where relevant.",
+        "confidence": 0.6,
+        "fallbackStrategy": [
+          "retry",
+          "alternative tool",
+          "cached result",
+          "relevant memory",
+          "state uncertainty"
+        ],
+        "estimatedCost": {
+          "toolCalls": 0,
+          "maxSteps": 2,
+          "latencyClass": "low"
+        }
+      },
+      "completedSteps": [
+        "Specialist execution"
+      ],
+      "pendingSteps": [
+        "Synthesize an answer grounded in available evidence",
+        "Verify major claims and evaluate answer quality"
+      ],
+      "toolResults": [],
+      "failures": [],
+      "confidence": 0.6,
+      "metadata": {
+        "startedAt": "2026-08-23T04:48:51.287Z",
+        "retries": 0
+      },
+      "trace": [],
+      "checkpointedAt": "2026-08-23T04:48:58.305Z"
+    },
+    "coordinator": {
+      "executionId": "11c06512-ea5c-4a5b-941f-c9b56a6a3f8c",
+      "request": "Explain JavaScript closures with a simple example.",
+      "context": [],
+      "memory": [],
+      "taskContext": {
+        "currentGoal": "",
+        "completedSteps": [],
+        "pendingSteps": [],
+        "currentPlan": [],
+        "currentFiles": [],
+        "currentDecisions": []
+      },
+      "plan": {
+        "goal": "Explain JavaScript closures with a simple example.",
+        "intent": "Explain JavaScript closures with a simple example.",
+        "complexity": "low",
+        "requiredAgents": [
+          "coordinator",
+          "verifier",
+          "critic"
+        ],
+        "requiredTools": [],
+        "parallelOpportunities": [],
+        "steps": [
+          "Synthesize an answer grounded in available evidence",
+          "Verify major claims and evaluate answer quality"
+        ],
+        "expectedOutput": "A direct response with uncertainty and sources disclosed where relevant.",
+        "confidence": 0.6,
+        "fallbackStrategy": [
+          "retry",
+          "alternative tool",
+          "cached result",
+          "relevant memory",
+          "state uncertainty"
+        ],
+        "estimatedCost": {
+          "toolCalls": 0,
+          "maxSteps": 2,
+          "latencyClass": "low"
+        }
+      },
+      "completedSteps": [
+        "Specialist execution"
+      ],
+      "pendingSteps": [
+        "Synthesize an answer grounded in available evidence",
+        "Verify major claims and evaluate answer quality"
+      ],
+      "toolResults": [],
+      "failures": [],
+      "confidence": 0.6,
+      "metadata": {
+        "startedAt": "2026-08-23T04:48:51.287Z",
+        "retries": 0
+      },
+      "trace": [],
+      "checkpointedAt": "2026-08-23T04:48:58.308Z"
+    },
+    "verification": {
+      "executionId": "11c06512-ea5c-4a5b-941f-c9b56a6a3f8c",
+      "request": "Explain JavaScript closures with a simple example.",
+      "context": [],
+      "memory": [],
+      "taskContext": {
+        "currentGoal": "",
+        "completedSteps": [],
+        "pendingSteps": [],
+        "currentPlan": [],
+        "currentFiles": [],
+        "currentDecisions": []
+      },
+      "plan": {
+        "goal": "Explain JavaScript closures with a simple example.",
+        "intent": "Explain JavaScript closures with a simple example.",
+        "complexity": "low",
+        "requiredAgents": [
+          "coordinator",
+          "verifier",
+          "critic"
+        ],
+        "requiredTools": [],
+        "parallelOpportunities": [],
+        "steps": [
+          "Synthesize an answer grounded in available evidence",
+          "Verify major claims and evaluate answer quality"
+        ],
+        "expectedOutput": "A direct response with uncertainty and sources disclosed where relevant.",
+        "confidence": 0.6,
+        "fallbackStrategy": [
+          "retry",
+          "alternative tool",
+          "cached result",
+          "relevant memory",
+          "state uncertainty"
+        ],
+        "estimatedCost": {
+          "toolCalls": 0,
+          "maxSteps": 2,
+          "latencyClass": "low"
+        }
+      },
+      "completedSteps": [
+        "Specialist execution"
+      ],
+      "pendingSteps": [
+        "Synthesize an answer grounded in available evidence",
+        "Verify major claims and evaluate answer quality"
+      ],
+      "toolResults": [],
+      "failures": [],
+      "confidence": 0.67,
+      "metadata": {
+        "startedAt": "2026-08-23T04:48:51.287Z",
+        "retries": 0
+      },
+      "trace": [],
+      "checkpointedAt": "2026-08-23T04:48:58.314Z"
+    }
+  }
+}
